@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from '../services/product.service';
+import { product } from 'data-type';
+import { ToastrService } from 'ngx-toastr';
+
 
 @Component({
   selector: 'app-seller-product',
@@ -7,13 +11,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SellerProductComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private products: ProductService,
+    private toastr: ToastrService,
+  ) { }
 
   ngOnInit(): void {
   }
 
-  productForm = (data:object)=>{
+  productForm = (data:product)=>{
     console.log(data)
+    this.products.addProduct(data).subscribe((result)=>{
+      console.log(result);
+      if(result){
+        this.toastr.success('Product Added Succesfully')
+      }
+    })
+
   }
 
 }

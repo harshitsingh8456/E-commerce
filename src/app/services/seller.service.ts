@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http'
 import { BehaviorSubject } from 'rxjs';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { login, signUp } from 'data-Type';
+import { login, signUp } from 'data-type';
 
 @Injectable({
   providedIn: 'root'

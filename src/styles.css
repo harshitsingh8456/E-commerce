@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+.toast-success{
+    background-color: #1cc88a !important;
+  }
+
+  .toast-error{
+    background-color: #e74a3b !important;
+    /* box-shadow: 1px 0px 2px -1px !important; */
+    /* z-index: 1000; */
+  }
+
+  .toast-warning{
+    background-color: #f6c23e !important;
+  }
+
+  .toast-info{
+    background-color: #4e73df !important;
+  }
