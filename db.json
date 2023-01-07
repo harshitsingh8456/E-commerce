@@ -1,0 +1,16 @@
+{
+  "seller": [
+    {
+      "name": "Harshit Singh",
+      "email": "harshitsingh8456@gmail.com",
+      "password": "123456",
+      "id": 1
+    },
+    {
+      "name": "Harshit Singh",
+      "email": "harshit.singh@xelpmoc.in",
+      "password": "123456",
+      "id": 2
+    }
+  ]
+}
