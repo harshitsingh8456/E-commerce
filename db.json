@@ -15,12 +15,12 @@
   ],
   "product": [
     {
-      "product": "phone 14",
-      "price": "100000",
-      "color": "back",
-      "category": "mobiles",
-      "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcS001JDPUNwcPiqzHYhaL_zpJA0Ym1r6mD9sSgTPad_JYdrk-o",
+      "product": "Iphone 14 Pro Max",
+      "price": 200000,
+      "color": "Black",
+      "category": "Mobile",
       "description": "hello users",
+      "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcS001JDPUNwcPiqzHYhaL_zpJA0Ym1r6mD9sSgTPad_JYdrk-o",
       "id": 1
     }
   ]

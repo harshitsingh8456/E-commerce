@@ -13,6 +13,8 @@ import { SellerSignupComponent } from './seller-signup/seller-signup.component';
 import { SellerHomeComponent } from './seller-home/seller-home.component';
 import { SellerHeaderComponent } from './seller-header/seller-header.component';
 import { SellerProductComponent } from './seller-product/seller-product.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 
 @NgModule({
@@ -31,7 +33,7 @@ import { SellerProductComponent } from './seller-product/seller-product.componen
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    // BrowserAnimationsModule
+    BrowserAnimationsModule,
     ToastrModule.forRoot({
       preventDuplicates: true,
     }),

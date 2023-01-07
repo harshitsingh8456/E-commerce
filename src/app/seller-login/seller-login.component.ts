@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SellerService } from '../services/seller.service';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { login } from 'data-Type';
+import { login } from 'data-type';
 
 @Component({
   selector: 'app-seller-login',

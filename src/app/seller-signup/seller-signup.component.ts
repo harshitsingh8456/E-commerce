@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SellerService } from '../services/seller.service';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { signUp } from 'data-Type';
-// import { signUp } from '../data-type';
+import { signUp } from 'data-type';
 
 @Component({
   selector: 'app-seller-signup',
