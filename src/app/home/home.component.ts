@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
 
   // images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
   popularProducts : undefined | product[]
+  trendyProducts : undefined | product []
 
   constructor(config: NgbCarouselConfig,
     private product: ProductService) {
@@ -27,6 +28,10 @@ export class HomeComponent implements OnInit {
     this.product.popularProducts().subscribe((response)=>{
       console.log(response);
       this.popularProducts = response
+    })
+    this.product.trendyProducts().subscribe((result)=>{
+      console.log(result);
+      this.trendyProducts = result
     })
   }
 

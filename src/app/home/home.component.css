@@ -87,3 +87,23 @@
     font-size: 1.125rem;
     font-weight: bold;
   }
+.view-button{
+  padding: 10px 20px;
+  background-color: rgb(117, 114, 107);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+.zoom:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.1);
+}
+.product-price-name {
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin: 10px 0;
+  color: rgb(117, 114, 107);
+}
