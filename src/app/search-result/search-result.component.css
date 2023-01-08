@@ -1,0 +1,59 @@
+.search-item{
+  width: 800px;
+  margin: 25px auto;
+  border-top: 1px solid #ddd;
+  padding-top: 15px;
+}
+.search-item img{
+  width: 100%;
+  object-fit: contain;
+  height: 150px;
+}
+.search-item h6{
+  color: blueviolet;
+  font-size: 24px;
+}
+.search-item p{
+  margin-bottom: 5px;
+}
+.search-item span{margin-right: 10px;}
+* { margin: 0; padding: 0;}
+body {font-family: sans-serif;}
+
+.msc-blank  {
+  text-align: center;
+  height: 35vh;
+}
+
+.msc-blank-desc {
+  font-size: 1rem;
+  color: gray;
+}
+.msc-blank-title {
+  font-size: 1.6rem;
+}
+.msc-blank-icon {
+  color: gray;
+  font-size: 4rem;
+}
+body,.back{
+  background-color:#000000;
+}
+.slide2 .card {
+background: linear-gradient(
+  to bottom,
+  #000 0,
+  #000 30%,
+  #eb2128 30%,
+  #eb2128 100%
+);
+padding: 0px;
+}
+
+.slide2 .col {
+flex: 0 0 0%;
+}
+
+.slide2 .col.gx-0 {
+padding: 8px;
+}

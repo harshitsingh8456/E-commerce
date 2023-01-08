@@ -1,0 +1,83 @@
+<app-header></app-header>
+<div class="row search-item" *ngFor="let item of searchResult">
+  <div class="col-sm-3">
+    <a>  <img src="{{item.image}}" alt=""></a>
+  </div>
+  <div class="col-sm-8 details">
+      <h6>  <a> {{item.product}} </a></h6>
+      <p><b>Price:{{item.price}}</b></p>
+      <p><span> <b>Color: </b> {{item.color}}</span><br><span> <b>Category:</b>  {{item.category.length > 20 ? item.category.slice(0,20)+"..." : item.category}}</span></p>
+      <p>{{item.description.length>100 ? item.description.slice(0,100) + "..." : item.description}}</p>
+  </div>
+</div>
+<span *ngIf="NoData">
+  <div class="msc-blank mt-5 pt-5">
+    <div class="msc-blank-icon">⚠</div>
+    <div class="msc-blank-title">
+      No Product Available
+    </div>
+    <div class="msc-blank-desc">
+     By the this Search {{pName}}
+    </div>
+  </div>
+
+
+  <!-- special Product -->
+<div class="back container-fluid slide2 d-flex-column justify-content-center ">
+  <div>
+      <h4 class="mb-2  text-center" style=" font-weight: 700; font-size: 50px; color:#FFFFFF">Try This Product</h4>
+  </div>
+
+  <div class="container">
+      <div class="d-flex flex-row justify-content-center">
+          <div class=" gx-0 m-1">
+              <div class="card" style="width: 365px;     border: 0px; ">
+                  <div class="card-body text-center" style="padding:0px; ">
+                      <img src="https://utioutll.sirv.com/Immortal%20Gaming/8_1.png" style="width: 300px;" class="" alt="...">
+                      <div class="in" style="    padding: 17px;            ">
+                          <h5 class="card-title fw-bold text-light">It is value for money, best sound
+                              especially
+                              bass"</h5>
+                          <p class="card-text py-4 fw-bold text-light"></p>
+                          <a href="#" class="badge rounded-pill px-4  py-2 bg-light text-dark">SHOP NOW</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="  gx-0 m-1">
+              <div class="card" style="width: 365px;     border: 0px; ">
+                  <div class="card-body text-center" style="padding:0px; ">
+                      <img src="https://utioutll.sirv.com/Immortal%20Gaming/8_2.png" style="width: 300px;" class="" alt="...">
+                      <div class="in" style="    padding: 17px;            ">
+                          <h5 class="card-title fw-bold text-light">"The battery backup is something
+                              unbelievable"
+                          </h5>
+                          <p class="card-text py-4 fw-bold text-light"></p>
+                          <a href="#" class="badge rounded-pill px-4  py-2 bg-light text-dark">SHOP NOW</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class=" gx-0 m-1">
+              <div class="card" style="width: 365px;     border: 0px; ">
+                  <div class="card-body text-center" style="padding:0px; ">
+                      <img src="https://utioutll.sirv.com/Immortal%20Gaming/8_3.png" style="width: 300px;" class=" " alt="...">
+                      <div class="in" style="    padding: 14.4px;            ">
+                          <h5 class="card-title fw-bold text-light">"Amazing product, great sound quality and
+                              the
+                              mic performance is also awesome."</h5>
+                          <p class="card-text py-3 fw-bold text-light"></p>
+                          <a href="#" class="badge rounded-pill px-4  py-2 bg-light text-dark">SHOP NOW</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      </div>
+      <br>
+      &nbsp;
+  </div>
+</div>
+</span>
+
+<app-footer></app-footer>
