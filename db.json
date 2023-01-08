@@ -58,6 +58,24 @@
       "description": "video gaming brand that consists of five home video game consoles, two handhelds, a media center, and a smartphone",
       "image": "https://images.pexels.com/photos/4219883/pexels-photo-4219883.jpeg?auto=compress&cs=tinysrgb&w=600",
       "id": 6
+    },
+    {
+      "product": "I Pad Air",
+      "price": 85000,
+      "color": "Silver",
+      "category": "Tablet",
+      "description": "The iPad is a touchscreen tablet PC made by Apple . The original iPad debuted in 2010. Apple has three iPad product lines: iPad, iPad mini and iPad Pro.",
+      "image": "https://images.pexels.com/photos/1334596/pexels-photo-1334596.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "id": 7
+    },
+    {
+      "product": "Addidas Bags",
+      "price": "2500",
+      "color": "Black",
+      "category": "Bag",
+      "description": "Addidas has a range of stylish and cool backpacks which are designed keeping in mind the needs of the consumers.",
+      "image": "https://images.pexels.com/photos/1102874/pexels-photo-1102874.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "id": 8
     }
   ]
 }

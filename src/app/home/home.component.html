@@ -19,7 +19,7 @@
   <div class="product-card zoom" *ngFor="let item of trendyProducts">
     <img style="height: 25vh; width: 40vh;" src="{{item.image}}">
     <h3 class="product-name">{{item.product}}</h3>
-    <p class="product-description">{{item.description}}</p>
+    <p class="product-description">{{item.description.length>100 ? item.description.slice(0,100)+"..." : item.description }}</p>
     <div class="product-price-name">Price:<span class="product-price">{{item.price}}</span></div>
     <div>
       <button class="view-button">View More</button>
@@ -28,4 +28,9 @@
     </div>
   </div>
   </div>
+
+
+
+
   <app-footer></app-footer>
+

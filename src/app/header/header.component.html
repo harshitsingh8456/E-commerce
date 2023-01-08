@@ -102,59 +102,16 @@
               <!-- *ngIf="menuType === 'deafult'" -->
               <div class="top-search">
                 <form action="#" method="get" class="form-search" accept-charset="utf-8">
-                  <div class="cat-wrap">
-                    <select name="category">
-                      <option hidden value="">All Category</option>
-                      <option hidden value="">Cameras</option>
-                      <option hidden value="">Computer</option>
-                      <option hidden value="">Laptops</option>
-                    </select>
-                    <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
-                    <div class="all-categories">
-                      <div class="cat-list-search">
-                        <div class="title">
-                          Electronics
-                        </div>
-                        <ul>
-                          <li>Components</li>
-                          <li>Laptop</li>
-                          <li>Monitor</li>
-                          <li>Mp3 player</li>
-                          <li>Scanners</li>
-                        </ul>
-                      </div><!-- /.cat-list-search -->
-                      <div class="cat-list-search">
-                        <div class="title">
-                          Furniture
-                        </div>
-                        <ul>
-                          <li>Bookcases</li>
-                          <li>Barstools</li>
-                          <li>TV stands</li>
-                          <li>Desks</li>
-                          <li>Accent chairs</li>
-                        </ul>
-                      </div><!-- /.cat-list-search -->
-                      <div class="cat-list-search">
-                        <div class="title">
-                          Accessories
-                        </div>
-                        <ul>
-                          <li>Software</li>
-                          <li>Mobile</li>
-                          <li>TV stands</li>
-                          <li>Printers</li>
-                          <li>Media</li>
-                        </ul>
-                      </div><!-- /.cat-list-search -->
-                    </div><!-- /.all-categories -->
-                    <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
-                  </div><!-- /.cat-wrap -->
                   <div class="box-search">
-                    <input type="text" name="search" placeholder="Search what you looking for ?">
+                    <input type="text" #searchInput (keyup)="searchProduct($event)" (blur)="hideSearch()" placeholder="Search what you looking for ?">
                     <span class="btn-search">
-                      <button type="submit" class="waves-effect"><i class="fa fa-search"></i></button>
+                      <button type="submit" (click)="submitSearch(searchInput.value)" class="waves-effect"><i class="fa fa-search"></i></button>
                     </span>
+                    <ul class="suggested-result" *ngIf="searchResult">
+                      <li *ngFor="let item of searchResult" >
+                      <a>{{item.product}}</a>
+                      </li>
+                    </ul>
 
                   </div><!-- /.box-search -->
                 </form><!-- /.form-search -->
