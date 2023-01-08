@@ -150,7 +150,7 @@ ul, ol {
 img {
   max-width: 100%;
   height: 2.5rem;
-  background: white;
+  /* background: white; */
   border-radius: 3rem;
   border: transparent;
 }
@@ -652,6 +652,9 @@ ul.flat-unstyled li > ul > li > a {
 .header-middle .grid-left #logo {
 	margin-bottom:0px;
 }
+/* .header-middle{
+  background: grey !important;
+} */
 
 .header-middle .logo.style1 {
 	float:left;

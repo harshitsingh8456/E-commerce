@@ -16,6 +16,7 @@ import { SellerProductComponent } from './seller-product/seller-product.componen
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SellerUpdateProductComponent } from './seller-update-product/seller-update-product.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -29,7 +30,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     SellerHomeComponent,
     SellerHeaderComponent,
     SellerProductComponent,
-    SellerUpdateProductComponent
+    SellerUpdateProductComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
