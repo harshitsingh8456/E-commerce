@@ -31,8 +31,8 @@ export class SellerLoginComponent implements OnInit {
     console.log(data)
     this.seller.userLogin(data)
     this.seller.isLoginError.subscribe((error:any)=>{
-      this.toastr.error('Email or Password in Not Correct')
-      this.authError = "Email or Password in Not Correct"
+      this.toastr.error('Email or Password is Not Correct')
+      this.authError = "Email or Password is Not Correct"
     })
   }
 }

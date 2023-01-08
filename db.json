@@ -15,13 +15,31 @@
   ],
   "product": [
     {
-      "product": "Iphone 14 Pro Max",
-      "price": 200000,
+      "product": "Samsung S11 pro",
+      "price": 150000,
       "color": "Black",
       "category": "Mobile",
-      "description": "hello users",
-      "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcS001JDPUNwcPiqzHYhaL_zpJA0Ym1r6mD9sSgTPad_JYdrk-o",
+      "description": "samsung specializes in the production of a wide variety of consumer and industry electronics",
+      "image": "https://image-us.samsung.com/SamsungUS/home/mobile/galaxy-a12/gallery/awesome-black/PDP-GALLERY-A12-black-lockup-1600x1200.jpg?$product-details-jpg$",
       "id": 1
+    },
+    {
+      "product": "Iphone 14 pro  max",
+      "price": 158000,
+      "color": "Black",
+      "category": "Mobile",
+      "description": "The iPhone 14 Pro Max measures 160.70 x 77.60 x 7.85mm (height x width x thickness) and weighs 240.00 grams",
+      "image": "https://www.gizmochina.com/wp-content/uploads/2022/04/noname-1-500x500.png",
+      "id": 3
+    },
+    {
+      "product": "Lenevo Laptop",
+      "price": 80000,
+      "color": "Black",
+      "category": "Laptop",
+      "description": "Lenovo ThinkPad is a Windows 10 laptop with a 14.00-inch display that has a resolution of 1920x1080 pixels",
+      "image": "https://www.gizmochina.com/wp-content/uploads/2019/01/Lenovo-V110-Office-Laptop.jpeg",
+      "id": 4
     }
   ]
 }
