@@ -9,10 +9,11 @@ export interface login {
 }
 
 export interface product {
-  name: string,
+  id:number,
+  product: string,
   price: number,
   category: string,
   color: string,
   description: string,
-  image: string
+  image: string,
 }

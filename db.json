@@ -15,13 +15,22 @@
   ],
   "product": [
     {
-      "product": "Iphone 14 Pro Max",
-      "price": 200000,
+      "product": "Samsung S22 Ultra",
+      "price": 140000,
       "color": "Black",
       "category": "Mobile",
-      "description": "hello users",
-      "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcS001JDPUNwcPiqzHYhaL_zpJA0Ym1r6mD9sSgTPad_JYdrk-o",
+      "description": "The Galaxy S22 Ultra boasts a larger 2.4um pixel sensor for capturing more light and data, as well as a Super Clear Glass lens for capturing nighttime videos without flares",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlXzKR_wDOiThUKiNWezaY6PuRly9hH7YNqf_yVvMg5omYkBXZkk6Qj7Abjtr0FXeQLNM&usqp=CAU",
       "id": 1
+    },
+    {
+      "product": "Iphone 14 Pro Max",
+      "price": 149999,
+      "color": "Black",
+      "category": "Mobile",
+      "description": "The iPhone 14 Pro Max measures 160.70 x 77.60 x 7.85mm (height x width x thickness) and weighs 240.00 grams.",
+      "image": "https://www.gizmochina.com/wp-content/uploads/2022/04/noname-1-500x500.png",
+      "id": 2
     }
   ]
 }
