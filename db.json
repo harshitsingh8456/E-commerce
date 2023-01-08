@@ -16,21 +16,30 @@
   "product": [
     {
       "product": "Samsung S22 Ultra",
-      "price": 140000,
+      "price": "140000",
       "color": "Black",
       "category": "Mobile",
       "description": "The Galaxy S22 Ultra boasts a larger 2.4um pixel sensor for capturing more light and data, as well as a Super Clear Glass lens for capturing nighttime videos without flares",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlXzKR_wDOiThUKiNWezaY6PuRly9hH7YNqf_yVvMg5omYkBXZkk6Qj7Abjtr0FXeQLNM&usqp=CAU",
+      "image": "https://images.pexels.com/photos/11872137/pexels-photo-11872137.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "id": 1
     },
     {
       "product": "Iphone 14 Pro Max",
-      "price": 149999,
+      "price": "149995",
       "color": "Black",
       "category": "Mobile",
       "description": "The iPhone 14 Pro Max measures 160.70 x 77.60 x 7.85mm (height x width x thickness) and weighs 240.00 grams.",
-      "image": "https://www.gizmochina.com/wp-content/uploads/2022/04/noname-1-500x500.png",
+      "image": "https://images.pexels.com/photos/10914594/pexels-photo-10914594.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "id": 2
+    },
+    {
+      "product": "Apple MacBook Air",
+      "price": "250000",
+      "color": "Silver",
+      "category": "Laptop",
+      "description": " The MacBook Air has an anodized aluminum casing that is 0.16 inches at its thinnest point and 0.76 inches at its thickest",
+      "image": "https://images.pexels.com/photos/7974/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "id": 4
     }
   ]
 }
