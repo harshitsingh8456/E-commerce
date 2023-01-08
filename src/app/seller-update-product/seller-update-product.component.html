@@ -1,0 +1,65 @@
+<app-seller-header></app-seller-header>
+<div class="section banner-content">
+  <div class="container p-4 p-md-5">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="form-wrapper">
+          <div class="row row-cols-1">
+            <div class="col-10">
+              <h1>Updates products</h1>
+              &nbsp;
+              &nbsp;
+              <!-- Product Name -->
+              <form #addProduct="ngForm" (ngSubmit)="productForm(addProduct.value)" class="form-group">
+                <p class="mb-1">Enter Product Name <span style="color: red;">*</span></p>
+                <div class="input-group mb-3" class ="searchForm">
+                  <input type="text"  name="product"
+                     class="form-control" ngModel="{{ProductData?.product}}"/>
+                </div>
+                <!-- Product Price -->
+                <p class="mb-1 mt-3">Enter Product Price <span style="color: red;">*</span></p>
+                <div class="input-group mb-3" class ="searchForm">
+                  <input type="number"   name="price"
+                    class="form-control" ngModel="{{ProductData?.price}}" />
+                </div>
+                <!-- Product Color -->
+                <p class="mb-1 mt-3">Enter Product Color <span style="color: red;">*</span></p>
+                <div class="input-group mb-3" class ="searchForm">
+                  <input type="text"  name="color"
+                    class="form-control" ngModel="{{ProductData?.color}}" />
+                </div>
+                <!-- Product Category -->
+                <p class="mb-1 mt-3">Enter Product Category <span style="color: red;">*</span></p>
+                <div class="input-group mb-3" class ="searchForm">
+                  <input type="text"  name="category"
+                   class="form-control"  ngModel="{{ProductData?.category}}"/>
+                </div>
+                <!-- Product Enter Description -->
+                <p class="mb-1 mt-3">Enter Product Description <span style="color: red;">*</span></p>
+                <div class="input-group mb-3" class ="searchForm">
+                    <textarea name="description" class="form-control" ngModel="{{ProductData?.description}}"></textarea>
+                </div>
+                <!-- Product Image -->
+                <p class="mb-1 mt-3">Enter Product Image Url <span style="color: red;">*</span></p>
+                <div class="input-group mb-3" class ="searchForm">
+                  <input type="url"  name="image"
+                    id="labSearch" class="form-control" title="Lab Search" ngModel="{{ProductData?.image}}"/>
+                </div>
+                &nbsp;
+                <div class="field padding-bottom--24">
+                  <input style="background: blue; width: 40%; margin-left: 15rem;" href="#" type="submit" value="Update Prpduct">
+                </div>
+              </form>
+            </div>
+          </div>
+          <!--/.row-->
+        </div>
+        <!--/.form-wrapper-->
+      </div>
+      <!--/.col-lg-12-->
+    </div>
+    <!--/.row -->
+  </div>
+  <!--/.container-->
+</div>
+<!--/.section-->

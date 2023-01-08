@@ -14,6 +14,8 @@ import { SellerHomeComponent } from './seller-home/seller-home.component';
 import { SellerHeaderComponent } from './seller-header/seller-header.component';
 import { SellerProductComponent } from './seller-product/seller-product.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SellerUpdateProductComponent } from './seller-update-product/seller-update-product.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -26,7 +28,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SellerSignupComponent,
     SellerHomeComponent,
     SellerHeaderComponent,
-    SellerProductComponent
+    SellerProductComponent,
+    SellerUpdateProductComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +40,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ToastrModule.forRoot({
       preventDuplicates: true,
     }),
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

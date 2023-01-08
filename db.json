@@ -15,31 +15,22 @@
   ],
   "product": [
     {
-      "product": "Samsung S11 pro",
-      "price": 150000,
+      "product": "Samsung S22 Ultra",
+      "price": 140000,
       "color": "Black",
       "category": "Mobile",
-      "description": "samsung specializes in the production of a wide variety of consumer and industry electronics",
-      "image": "https://image-us.samsung.com/SamsungUS/home/mobile/galaxy-a12/gallery/awesome-black/PDP-GALLERY-A12-black-lockup-1600x1200.jpg?$product-details-jpg$",
+      "description": "The Galaxy S22 Ultra boasts a larger 2.4um pixel sensor for capturing more light and data, as well as a Super Clear Glass lens for capturing nighttime videos without flares",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlXzKR_wDOiThUKiNWezaY6PuRly9hH7YNqf_yVvMg5omYkBXZkk6Qj7Abjtr0FXeQLNM&usqp=CAU",
       "id": 1
     },
     {
-      "product": "Iphone 14 pro  max",
-      "price": 158000,
+      "product": "Iphone 14 Pro Max",
+      "price": 149999,
       "color": "Black",
       "category": "Mobile",
-      "description": "The iPhone 14 Pro Max measures 160.70 x 77.60 x 7.85mm (height x width x thickness) and weighs 240.00 grams",
+      "description": "The iPhone 14 Pro Max measures 160.70 x 77.60 x 7.85mm (height x width x thickness) and weighs 240.00 grams.",
       "image": "https://www.gizmochina.com/wp-content/uploads/2022/04/noname-1-500x500.png",
-      "id": 3
-    },
-    {
-      "product": "Lenevo Laptop",
-      "price": 80000,
-      "color": "Black",
-      "category": "Laptop",
-      "description": "Lenovo ThinkPad is a Windows 10 laptop with a 14.00-inch display that has a resolution of 1920x1080 pixels",
-      "image": "https://www.gizmochina.com/wp-content/uploads/2019/01/Lenovo-V110-Office-Laptop.jpeg",
-      "id": 4
+      "id": 2
     }
   ]
 }
