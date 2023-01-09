@@ -167,3 +167,23 @@ text-color {
 .text-bold {
   font-weight: 500;
 }
+.details-snippet1 {
+  color: #585656;
+}
+
+/* Main text uses this styling and color */
+.details-snippet1 .theme-text {
+  color: purple;
+  font-weight: bold;
+}
+
+.details-snippet1 .mini-preview img {
+  border: 1px solid #585656;
+  border: 1px solid purple;
+  margin-bottom: 8px;
+}
+.img-fluid {
+  max-width: 115%;
+  /* height: auto; */
+  height: 20vh;
+}

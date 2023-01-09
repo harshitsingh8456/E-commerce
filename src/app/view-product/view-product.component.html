@@ -49,10 +49,10 @@
 
 <div class="container my-5">
   <div class="row">
-      <div class="col-md-5">
-          <div class="main-img">
+      <div class="col-md-7">
+          <!-- <div class="main-img">
               <img  class="img-fluid mt-5" src="{{getDetails.image ? getDetails.image :'' }}">
-              <!-- <div class="row my-3 previews">
+              <div class="row my-3 previews">
                   <div class="col-md-3">
                       <img class="w-100" src="https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Sale">
                   </div>
@@ -65,10 +65,25 @@
                   <div class="col-md-3">
                       <img class="w-100" src="https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Sale">
                   </div>
-              </div> -->
-          </div>
+              </div>
+          </div> -->
+          <div class="row">
+            <div class="col-md-2 mini-preview mt-5">
+                <img style="border-radius: 0.5rem;" class="img-fluid mt-1" src="{{getDetails.image1 ? getDetails.image1 :'' }}" alt="Preview">
+                <img style="border-radius: 0.5rem;" class="img-fluid mt-2" src="{{getDetails.image2 ? getDetails.image2 :'' }}" alt="Preview">
+                <img style="border-radius: 0.5rem;" class="img-fluid mt-2" src="{{getDetails.image3 ? getDetails.image3 :'' }}" alt="Preview">
+            </div>
+            <div class="col-md-10">
+                <div class="product-image">
+                    <img style="    height: 104vh;
+                    width: 90%;
+                    border-radius: 1.5rem;" class="img-fluid mt-5" src="{{getDetails.image ? getDetails.image :'' }}" alt="Main Image">
+                </div>
+
+            </div>
+        </div>
       </div>
-      <div class="col-md-7 mt-5">
+      <div class="col-md-5 mt-5">
           <div class="main-description px-2">
             <div class="product-titles">
               {{getDetails.product ? getDetails.product :'' }}
