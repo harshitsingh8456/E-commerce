@@ -16,8 +16,14 @@
                   <input type="text"  name="product"
                      class="form-control" ngModel/>
                 </div>
+                <!-- Product Price Before-->
+               <p class="mb-1 mt-3">Enter Product Price <span style="color: red;">*</span></p>
+               <div class="input-group mb-3" class ="searchForm">
+                 <input type="number"   name="price_before"
+                   class="form-control" ngModel />
+               </div>
                 <!-- Product Price -->
-                <p class="mb-1 mt-3">Enter Product Price <span style="color: red;">*</span></p>
+                <p class="mb-1 mt-3">Enter Discount Product Price <span style="color: red;">*</span></p>
                 <div class="input-group mb-3" class ="searchForm">
                   <input type="number"   name="price"
                     class="form-control" ngModel />
@@ -39,10 +45,28 @@
                 <div class="input-group mb-3" class ="searchForm">
                     <textarea name="description" class="form-control" ngModel></textarea>
                 </div>
-                <!-- Product Image -->
-                <p class="mb-1 mt-3">Enter Product Image Url <span style="color: red;">*</span></p>
+                <!-- Product Image 1 -->
+                <p class="mb-1 mt-3">Enter Product Image Url 1<span style="color: red;">*</span></p>
                 <div class="input-group mb-3" class ="searchForm">
                   <input type="url"  name="image"
+                    id="labSearch" class="form-control" title="Lab Search" ngModel/>
+                </div>
+                 <!-- Product Image 2 -->
+                <p class="mb-1 mt-3">Enter Product Image Url 2<span style="color: red;">*</span></p>
+                <div class="input-group mb-3" class ="searchForm">
+                  <input type="url"  name="image1"
+                    id="labSearch" class="form-control" title="Lab Search" ngModel/>
+                </div>
+                <!-- Product Image 3 -->
+                <p class="mb-1 mt-3">Enter Product Image Url 3<span style="color: red;">*</span></p>
+                <div class="input-group mb-3" class ="searchForm">
+                  <input type="url"  name="image2"
+                    id="labSearch" class="form-control" title="Lab Search" ngModel/>
+                </div>
+                <!-- Product Image 4 -->
+                <p class="mb-1 mt-3">Enter Product Image Url 4<span style="color: red;">*</span></p>
+                <div class="input-group mb-3" class ="searchForm">
+                  <input type="url"  name="image3"
                     id="labSearch" class="form-control" title="Lab Search" ngModel/>
                 </div>
                 &nbsp;

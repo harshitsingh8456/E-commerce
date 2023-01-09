@@ -7,6 +7,7 @@ import { product } from 'data-type';
 })
 export class ProductService {
 
+
   constructor(private http: HttpClient) { }
 
   addProduct(data:product) {
@@ -29,9 +30,12 @@ export class ProductService {
     return this.http.get<product[]>('http://localhost:3000/product?_limit=5')
   }
   trendyProducts(){
-    return this.http.get<product[]>('http://localhost:3000/product?_limit=8')
+    return this.http.get<product[]>('http://localhost:3000/product?_limit=10')
   }
   searchProduct(query:string) {
     return this.http.get<product[]>(`http://localhost:3000/product?q=${query}`)
+  }
+  viewProduct(id:number){
+    return this.http.get(`http://localhost:3000/product/${id}`)
   }
 }
