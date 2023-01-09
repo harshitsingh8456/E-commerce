@@ -1,0 +1,169 @@
+/* * {
+  box-sizing: border-box;
+}
+
+
+.description-container {
+  position: relative;
+  height: 900px;
+}
+
+.main-description {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.main-description h3 {
+  font-size: 2rem;
+}
+
+.add-inputs,
+.add-inputs input {
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 2px;
+}
+
+.add-inputs button {
+  border-radius: 0;
+}
+
+.add-inputs input {
+  height: 48px;
+  width: 65px;
+  border-radius: 0;
+}
+
+
+.product-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.product-price {
+  font-size: 1.8rem;
+}
+.img-fluid {
+  max-width: 90%;
+  height: 75vh !important;
+  border-radius: 2rem;
+} */
+
+
+.text-bold {
+  font-weight: 800;
+}
+
+text-color {
+  color: #0093c4;
+}
+
+/* Main image - left */
+.main-img img {
+  width: 93%;
+  height: 90vh;
+  border-radius: 1.5rem;
+}
+
+/* Preview images */
+.previews img {
+  width: 100%;
+  height: 140px;
+}
+
+.main-description .category {
+  text-transform: uppercase;
+  color: #0093c4;
+}
+
+.main-description .product-title {
+  font-size: 1rem;
+}
+
+.product-titles {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.old-price-discount {
+  font-weight: 600;
+}
+
+.new-price {
+  font-size: 2rem;
+}
+
+.details-title {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #757575;
+}
+
+.buttons .block {
+  margin-right: 5px;
+}
+
+.quantity input {
+  border-radius: 0;
+  height: 40px;
+
+}
+
+
+.custom-btn {
+  text-transform: capitalize;
+  background-color: #0093c4;
+  color: white;
+  width: 150px;
+  height: 40px;
+  border-radius: 0;
+}
+
+.custom-btn:hover {
+  background-color: #0093c4 !important;
+  font-size: 18px;
+  color: white !important;
+}
+
+.similar-product img {
+  height: 400px;
+}
+
+.similar-product {
+  text-align: left;
+}
+
+.similar-product .title {
+  margin: 17px 0px 4px 0px;
+}
+
+.similar-product .price {
+  font-weight: bold;
+}
+
+.questions .icon i {
+  font-size: 2rem;
+}
+
+.questions-icon {
+  font-size: 2rem;
+  color: #0093c4;
+}
+
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+
+  /* Make preview images responsive  */
+  .previews img {
+      width: 100%;
+      height: auto;
+  }
+
+}
+.text-bold {
+  font-weight: 500;
+}

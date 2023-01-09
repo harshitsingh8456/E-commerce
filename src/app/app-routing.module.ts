@@ -8,6 +8,7 @@ import { SellerProductComponent } from './seller-product/seller-product.componen
 import { SellerUpdateProductComponent } from './seller-update-product/seller-update-product.component';
 import { AuthGuard } from './auth.guard';
 import { SearchResultComponent } from './search-result/search-result.component';
+import { ViewProductComponent } from './view-product/view-product.component';
 
 const routes: Routes = [
   {
@@ -42,6 +43,10 @@ const routes: Routes = [
     component:SellerUpdateProductComponent,
     canActivate: [AuthGuard]
   },
+  {
+    path:'view/products/:id',
+    component:ViewProductComponent
+  }
 
 ];
 

@@ -11,6 +11,7 @@ export interface login {
 export interface product {
   id:number,
   product: string,
+  price_before:number,
   price: number,
   category: string,
   color: string,

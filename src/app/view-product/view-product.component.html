@@ -1,0 +1,188 @@
+<app-header></app-header>
+
+<!-- <div class="container my-5">
+
+
+  <div class="row">
+
+      <div class="col-md-6 col-sm-12">
+          <img class="img-fluid details-img mt-5" src="{{getDetails.image ? getDetails.image :'' }}" alt="">
+      </div>
+      <div class="col-md-6 col-sm-12 description-container">
+          <div class="main-description">
+              <p class="product-category mb-0">Color: {{getDetails.color ? getDetails.color :'' }}</p>
+              <h3 class="mt-2">{{getDetails.product ? getDetails.product :'' }}</h3>
+              <p class="product-price">Price: {{getDetails.price ? getDetails.price :'' }}</p>
+
+
+
+              <p class="product-title mt-4 mb-1">About this product</p>
+              <p class="product-description mb-4">
+                {{getDetails.description ? getDetails.description :'' }}
+              </p>
+
+
+              <form class="add-inputs" method="post">
+                  <input type="number" class="form-control" id="cart_quantity" name="cart_quantity" value="1" min="1" max="10">
+                  <button name="add_to_cart" type="submit" class="btn btn-primary btn-lg">Add to cart</button>
+              </form>
+              <form class="add-inputs" method="post">
+                  <button name="add_to_cart" type="submit" class="btn btn-primary btn-lg">Add to Wishlist</button>
+              </form>
+              <div style="clear:both"></div>
+
+
+
+          </div>
+
+
+
+
+      </div>
+  </div>
+</div>  -->
+
+
+
+
+
+
+<div class="container my-5">
+  <div class="row">
+      <div class="col-md-5">
+          <div class="main-img">
+              <img  class="img-fluid mt-5" src="{{getDetails.image ? getDetails.image :'' }}">
+              <!-- <div class="row my-3 previews">
+                  <div class="col-md-3">
+                      <img class="w-100" src="https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Sale">
+                  </div>
+                  <div class="col-md-3">
+                      <img class="w-100" src="https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Sale">
+                  </div>
+                  <div class="col-md-3">
+                      <img class="w-100" src="https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Sale">
+                  </div>
+                  <div class="col-md-3">
+                      <img class="w-100" src="https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Sale">
+                  </div>
+              </div> -->
+          </div>
+      </div>
+      <div class="col-md-7 mt-5">
+          <div class="main-description px-2">
+            <div class="product-titles">
+              {{getDetails.product ? getDetails.product :'' }}
+          </div>
+              <div class="category text-bold">
+                  Category: {{getDetails.category ? getDetails.category :'' }}
+              </div>
+              <div class="product-title text-bold my-3">
+                Color: {{getDetails.color ? getDetails.color :'' }}
+              </div>
+
+
+              <div class="price-area my-4">
+                  <p class="old-price mb-1"><del>{{getDetails.price_before ? getDetails.price_before :'' }}</del> <span class="old-price-discount text-danger">(20% off)</span></p>
+                  <p class="new-price text-bold mb-1">{{getDetails.price ? getDetails.price :'' }}</p>
+                  <p class="text-secondary mb-1">(Additional tax may apply on checkout)</p>
+
+              </div>
+
+
+              <div class="buttons d-flex my-5">
+                  <div class="block">
+                      <a href="#" class="shadow btn custom-btn "><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-check-fill mb-1" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zm-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                      </svg> <span> Wishlist</span></a>
+                  </div>
+                  <div class="block">
+                      <button class="shadow btn custom-btn"><svg  xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-dash-fill mb-1" viewBox="0 0 16 16">
+                        <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM6.5 7h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1 0-1z"/>
+                      </svg><span class="mt-3"> Add to cart </span></button>
+                  </div>
+
+                  <div class="block quantity">
+                      <input type="number" class="form-control" id="cart_quantity" value="1" min="0" max="5" placeholder="Enter email" name="cart_quantity">
+                  </div>
+              </div>
+
+
+
+
+          </div>
+
+          <div class="product-details my-4">
+              <p class="details-title text-color mb-1">Product Details</p>
+              <p class="description">{{getDetails.description ? getDetails.description :'' }} </p>
+          </div>
+
+              <div class="row questions bg-light p-3" >
+              <div class="col-md-1 icon mt-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chat-left-dots-fill" viewBox="0 0 16 16">
+                  <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm5 4a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                </svg>
+              </div>
+              <div class="col-md-11 text">
+                  Have a question about our products at E-Store? Feel free to contact our representatives via live chat or email.
+              </div>
+          </div>
+
+          <div class="delivery my-4">
+              <p class="font-weight-bold mb-0"><span><svg style="color: black;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
+                <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+              </svg>&nbsp;</span> <b>Delivery done in 3 days from date of purchase</b> </p>
+              <p class="text-secondary">Order now to get this product delivery</p>
+          </div>
+          <!-- <div class="delivery-options my-4">
+              <p class="font-weight-bold mb-0"><span><i class="fa-solid fa-filter"></i></span> <b>Delivery options</b> </p>
+              <p class="text-secondary">View delivery options here</p>
+          </div> -->
+
+
+      </div>
+  </div>
+</div>
+
+
+
+<!-- <div class="container similar-products my-4">
+  <hr>
+  <p class="display-5">Similar Products</p>
+
+  <div class="row">
+      <div class="col-md-3">
+          <div class="similar-product">
+              <img class="w-100" src="https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Preview">
+              <p class="title">Lovely black dress</p>
+              <p class="price">$100</p>
+          </div>
+      </div>
+      <div class="col-md-3">
+          <div class="similar-product">
+              <img class="w-100" src="https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Preview">
+              <p class="title">Lovely Dress with patterns</p>
+              <p class="price">$85</p>
+          </div>
+      </div>
+      <div class="col-md-3">
+          <div class="similar-product">
+              <img class="w-100" src="https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Preview">
+              <p class="title">Lovely fashion dress</p>
+              <p class="price">$200</p>
+          </div>
+      </div>
+      <div class="col-md-3">
+          <div class="similar-product">
+              <img class="w-100" src="https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Preview">
+              <p class="title">Lovely red dress</p>
+              <p class="price">$120</p>
+          </div>
+      </div>
+  </div>
+</div> -->
+
+
+
+
+
+<app-footer></app-footer>
