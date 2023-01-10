@@ -29,56 +29,29 @@
                 </li>
               </ul><!-- /.flat-infomation -->
             </div><!-- /.col-md-4 -->
-            <div class="col-md-4">
-              <ul class="flat-unstyled">
+            <div class="col-md-4"  [ngSwitch]="menuType">
+              <ul class="flat-unstyled" *ngSwitchCase=" 'deafult' ">
                 <li class="account">
-                  <a  title="">Login</a>
-                  <!-- <ul class="unstyled">
-                    <li>
-                      <a  title="">Login</a>
-                    </li>
-                    <li>
-                      <a  title="">Wishlist</a>
-                    </li>
-                    <li>
-                      <a  title="">My Cart</a>
-                    </li>
-                    <li>
-                      <a  title="">My Account</a>
-                    </li>
-                    <li>
-                      <a  title="">Checkout</a>
-                    </li>
-                  </ul> -->
-                </li>
-                <li>
-                  <a  title="">USD<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                  <ul class="unstyled">
-                    <li>
-                      <a  title="">Euro</a>
-                    </li>
-                    <li>
-                      <a  title="">Dolar</a>
-                    </li>
-                  </ul>
+                  <a  title="" routerLink="user/login">Login</a>
                 </li>
                 <li>
                   <a  title="">English<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                   <ul class="unstyled">
                     <li>
-                      <a  title="">Turkish</a>
-                    </li>
-                    <li>
                       <a  title="">English</a>
                     </li>
+                  </ul>
+                </li>
+              </ul><!-- /.flat-unstyled -->
+              <ul class="flat-unstyled" *ngSwitchCase=" 'user' ">
+                <li class="account">
+                  <a  title="" >Logout</a>
+                </li>
+                <li>
+                  <a  title="">English<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                  <ul class="unstyled">
                     <li>
-                      <a  title="">اللغة العربية</a>
-                    </li>
-                    <li>
-                      <a  title="">Español</a>
-                    </li>
-                    <li>
-                      <a  title="">Italiano</a>
+                      <a  title="">English</a>
                     </li>
                   </ul>
                 </li>
@@ -109,7 +82,7 @@
                     </span>
                     <ul class="suggested-result" *ngIf="searchResult">
                       <li *ngFor="let item of searchResult" >
-                      <a>{{item.product}}</a>
+                      <a (mousedown)="redirectToDetails(item.id)">{{item.product}}</a>
                       </li>
                     </ul>
 
@@ -211,26 +184,20 @@
                     <li class="column-1">
                       <a  routerLink="seller/login" title="">Seller</a>
                     </li><!-- /.column-1 -->
-                    <li class="column-1">
-                      <a  title="">Features</a>
-                    </li><!-- /.column-1 -->
                     <li class="has-mega-menu">
-                      <a  title="">Electronic</a>
+                      <a  title="">product</a>
                     </li><!-- /.has-mega-menu -->
-                    <li class="column-1">
-                      <a  title="">Pages</a>
-                    </li><!-- /.column-1 -->
                     <li class="column-1">
                       <a  title="">Blog</a>
                     </li><!-- /.column-1 -->
                     <li class="column-1">
-                      <a  title="">Contact</a>
+                      <a  title="" routerLink="contact">Contact</a>
                     </li><!-- /.column-1 -->
                   </ul><!-- /.menu -->
                 </div><!-- /.mainnav -->
               </div><!-- /.nav-wrap -->
               <div class="today-deal">
-                <a  title="">TODAY DEALS</a>
+                <a  title="">{{userName ? userName : 'Today Deals'}}</a>
               </div><!-- /.today-deal -->
               <div class="btn-menu">
                 <span></span>

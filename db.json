@@ -53,5 +53,37 @@
       "image3": "https://images.pexels.com/photos/2047914/pexels-photo-2047914.jpeg?auto=compress&cs=tinysrgb&w=600",
       "id": 11
     }
+  ],
+  "users": [
+    {
+      "name": "Harshit Singh",
+      "email": "harshitsingh8456@gmail.com",
+      "password": "123456",
+      "id": 1
+    },
+    {
+      "name": "Harshit Singh",
+      "email": "harshit.singh@xelpmoc.in",
+      "password": "123456",
+      "id": 2
+    },
+    {
+      "name": "Harshit Singh",
+      "email": "harshitsingh5595@gmail.com",
+      "password": "123456",
+      "id": 3
+    },
+    {
+      "name": "Harshit Singh",
+      "email": "harshit.singh@xelpmoc.in",
+      "password": "123456",
+      "id": 4
+    },
+    {
+      "name": "Harshit",
+      "email": "harshit.singh@xelpmoc.in",
+      "password": "123456",
+      "id": 5
+    }
   ]
 }

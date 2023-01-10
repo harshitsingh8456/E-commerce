@@ -12,6 +12,7 @@ export class HeaderComponent implements OnInit {
 
   menuType:string ='deafult';
   searchResult:undefined | product[]
+  userName: string = '';
 
   constructor(private router : Router,
     private product: ProductService) { }
@@ -20,9 +21,11 @@ export class HeaderComponent implements OnInit {
     this.router.events.subscribe((val:any)=>{
       if(val.url){
         console.log(val.url);
-        if(localStorage.getItem('seller') && val.url.includes('seller')) {
-          console.log('In Seller Area')
-          this.menuType = 'seller'
+         if(localStorage.getItem('user')){
+          let userStore = localStorage.getItem('user');
+          let userData = userStore && JSON.parse(userStore);
+          this.userName = userData.name
+          this.menuType = 'user';
         }
         else {
           console.log('Outsite Seller Area')
@@ -50,6 +53,9 @@ export class HeaderComponent implements OnInit {
     console.log(val);
     this.router.navigate([`/search/${val}`])
 
+  }
+  redirectToDetails(id:number){
+    this.router.navigate(['/view/products/'+id])
   }
 
 }

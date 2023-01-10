@@ -9,6 +9,9 @@ import { SellerUpdateProductComponent } from './seller-update-product/seller-upd
 import { AuthGuard } from './auth.guard';
 import { SearchResultComponent } from './search-result/search-result.component';
 import { ViewProductComponent } from './view-product/view-product.component';
+import { ContactPageComponent } from './contact-page/contact-page.component';
+import { UserLoginComponent } from './user-login/user-login.component';
+import { UserSignupComponent } from './user-signup/user-signup.component';
 
 const routes: Routes = [
   {
@@ -46,6 +49,18 @@ const routes: Routes = [
   {
     path:'view/products/:id',
     component:ViewProductComponent
+  },
+  {
+    path:'contact',
+    component:ContactPageComponent
+  },
+  {
+    path:'user/login',
+    component:UserLoginComponent
+  },
+  {
+    path:'user/sign-up',
+    component:UserSignupComponent
   }
 
 ];
