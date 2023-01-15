@@ -22,6 +22,7 @@ import { ViewProductComponent } from './view-product/view-product.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { UserSignupComponent } from './user-signup/user-signup.component';
+import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
 
 
 
@@ -41,7 +42,8 @@ import { UserSignupComponent } from './user-signup/user-signup.component';
     ViewProductComponent,
     ContactPageComponent,
     UserLoginComponent,
-    UserSignupComponent
+    UserSignupComponent,
+    AddToCartComponent
   ],
   imports: [
     BrowserModule,

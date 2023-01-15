@@ -20,4 +20,5 @@ export interface product {
   image1: string,
   image2: string,
   image3: string,
+  value:undefined | any
 }

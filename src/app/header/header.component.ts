@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
   menuType:string ='deafult';
   searchResult:undefined | product[]
   userName: string = '';
+  cartNumber = 0;
 
   constructor(private router : Router,
     private product: ProductService) { }
@@ -33,6 +34,16 @@ export class HeaderComponent implements OnInit {
         }
       // }
     // })
+
+
+    let cartData = localStorage.getItem('localCart');
+    if(cartData){
+      this.cartNumber = JSON.parse(cartData).length
+    }
+
+    this.product.cartData.subscribe((response)=>{
+      this.cartNumber = response.length
+    })
   }
 
   searchProduct(query:KeyboardEvent){

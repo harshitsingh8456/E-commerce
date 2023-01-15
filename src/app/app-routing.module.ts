@@ -12,6 +12,7 @@ import { ViewProductComponent } from './view-product/view-product.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { UserSignupComponent } from './user-signup/user-signup.component';
+import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
 
 const routes: Routes = [
   {
@@ -61,6 +62,10 @@ const routes: Routes = [
   {
     path:'user/sign-up',
     component:UserSignupComponent
+  },
+  {
+    path:'user/add-to-cart',
+    component:AddToCartComponent
   }
 
 ];

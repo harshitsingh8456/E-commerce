@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<app-header></app-header>
+<app-header class="mb-5"></app-header>
 
 <!-- <div class="container my-5">
 
@@ -48,158 +48,45 @@
 
 
 
-<div class="container my-5">
-  <div class="row">
-      <div class="col-md-7">
-          <!-- <div class="main-img">
-              <img  class="img-fluid mt-5" src="{{getDetails.image ? getDetails.image :'' }}">
-              <div class="row my-3 previews">
-                  <div class="col-md-3">
-                      <img class="w-100" src="https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Sale">
-                  </div>
-                  <div class="col-md-3">
-                      <img class="w-100" src="https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Sale">
-                  </div>
-                  <div class="col-md-3">
-                      <img class="w-100" src="https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Sale">
-                  </div>
-                  <div class="col-md-3">
-                      <img class="w-100" src="https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Sale">
-                  </div>
-              </div>
-          </div> -->
-          <div class="row">
-            <div class="col-md-2 mini-preview mt-5">
-                <img style="border-radius: 0.5rem;" class="img-fluid mt-1" src="{{getDetails.image1 ? getDetails.image1 :'' }}" alt="Preview">
-                <img style="border-radius: 0.5rem;" class="img-fluid mt-2" src="{{getDetails.image2 ? getDetails.image2 :'' }}" alt="Preview">
-                <img style="border-radius: 0.5rem;" class="img-fluid mt-2" src="{{getDetails.image3 ? getDetails.image3 :'' }}" alt="Preview">
-            </div>
-            <div class="col-md-10">
-                <div class="product-image">
-                    <img style="    height: 104vh;
-                    width: 90%;
-                    border-radius: 1.5rem;" class="img-fluid mt-5" src="{{getDetails.image ? getDetails.image :'' }}" alt="Main Image">
-                </div>
-
-            </div>
-        </div>
-      </div>
-      <div class="col-md-5 mt-5">
-          <div class="main-description px-2">
-            <div class="product-titles">
-              {{getDetails.product ? getDetails.product :'' }}
-          </div>
-              <div class="category text-bold">
-                  Category: {{getDetails.category ? getDetails.category :'' }}
-              </div>
-              <div class="product-title text-bold my-3">
-                Color: {{getDetails.color ? getDetails.color :'' }}
-              </div>
-
-
-              <div class="price-area my-4">
-                  <p class="old-price mb-1"><del>{{getDetails.price_before ? getDetails.price_before :'' }}</del> <span class="old-price-discount text-danger">(20% off)</span></p>
-                  <p class="new-price text-bold mb-1">{{getDetails.price ? getDetails.price :'' }}</p>
-                  <p class="text-secondary mb-1">(Additional tax may apply on checkout)</p>
-
-              </div>
-
-
-              <div class="buttons d-flex my-5">
-                  <div class="block">
-                      <a href="#" class="shadow btn custom-btn "><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-check-fill mb-1" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zm-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
-                      </svg> <span> Wishlist</span></a>
-                  </div>
-                  <div class="block">
-                      <button class="shadow btn custom-btn"><svg  xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-dash-fill mb-1" viewBox="0 0 16 16">
-                        <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM6.5 7h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1 0-1z"/>
-                      </svg><span class="mt-3"> Add to cart </span></button>
-                  </div>
-
-                  <div class="block quantity">
-                      <input type="number" class="form-control" id="cart_quantity" value="1" min="0" max="5" placeholder="Enter email" name="cart_quantity">
-                  </div>
-              </div>
-
-
-
-
-          </div>
-
-          <div class="product-details my-4">
-              <p class="details-title text-color mb-1">Product Details</p>
-              <p class="description">{{getDetails.description ? getDetails.description :'' }} </p>
-          </div>
-
-              <div class="row questions bg-light p-3" >
-              <div class="col-md-1 icon mt-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chat-left-dots-fill" viewBox="0 0 16 16">
-                  <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm5 4a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-                </svg>
-              </div>
-              <div class="col-md-11 text">
-                  Have a question about our products at E-Store? Feel free to contact our representatives via live chat or email.
-              </div>
-          </div>
-
-          <div class="delivery my-4">
-              <p class="font-weight-bold mb-0"><span><svg style="color: black;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
-                <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
-              </svg>&nbsp;</span> <b>Delivery done in 3 days from date of purchase</b> </p>
-              <p class="text-secondary">Order now to get this product delivery</p>
-          </div>
-          <!-- <div class="delivery-options my-4">
-              <p class="font-weight-bold mb-0"><span><i class="fa-solid fa-filter"></i></span> <b>Delivery options</b> </p>
-              <p class="text-secondary">View delivery options here</p>
-          </div> -->
-
-
-      </div>
-  </div>
-</div>
-
-
-
 <div class = "card-wrapper">
   <div class = "card">
     <!-- card left -->
     <div class = "product-imgs">
       <div class = "img-display">
         <div class = "img-showcase">
-          <img src = "https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_1.jpg" alt = "shoe image">
-          <img src = "https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_2.jpg" alt = "shoe image">
-          <img src = "https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_3.jpg" alt = "shoe image">
-          <img src = "https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_4.jpg" alt = "shoe image">
+          <img src = "{{getDetails.image ? getDetails.image :'' }}" alt = "image">
+          <img src = "{{getDetails.image1 ? getDetails.image1 :'' }}" alt = "image">
+          <img src = "{{getDetails.image2 ? getDetails.image2 :'' }}" alt = "image">
+          <img src = "{{getDetails.image3 ? getDetails.image3 :'' }}" alt = "image">
         </div>
       </div>
       <div class = "img-select">
         <div class = "img-item">
           <a href = "#" data-id = "1">
-            <img src = "https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_1.jpg" alt = "shoe image">
+            <img src = "{{getDetails.image1 ? getDetails.image1 :'' }}">
           </a>
         </div>
         <div class = "img-item">
           <a href = "#" data-id = "2">
-            <img src = "https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_2.jpg" alt = "shoe image">
+            <img src = "{{getDetails.image2 ? getDetails.image2 :'' }}" alt = "image">
           </a>
         </div>
         <div class = "img-item">
           <a href = "#" data-id = "3">
-            <img src = "https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_3.jpg" alt = "shoe image">
+            <img src = "{{getDetails.image3 ? getDetails.image3 :'' }}" alt = "image">
           </a>
         </div>
         <div class = "img-item">
           <a href = "#" data-id = "4">
-            <img src = "https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_4.jpg" alt = "shoe image">
+            <img src = "{{getDetails.image ? getDetails.image :'' }}">
           </a>
         </div>
       </div>
     </div>
     <!-- card right -->
     <div class = "product-content">
-      <h2 class = "product-title">nike shoes</h2>
-      <a href = "#" class = "product-link">visit nike store</a>
+      <h2 class = "product-title">{{getDetails.product ? getDetails.product :'' }}</h2>
+      <!-- <a href = "#" class = "product-link">visit nike store</a> -->
       <div class = "product-rating">
         <i class = "fas fa-star"></i>
         <i class = "fas fa-star"></i>
@@ -210,29 +97,34 @@
       </div>
 
       <div class = "product-price">
-        <p class = "last-price">Old Price: <span>$257.00</span></p>
-        <p class = "new-price">New Price: <span>$249.00 (5%)</span></p>
+        <p class = "last-price">Old Price: <span>{{getDetails.price_before ? getDetails.price_before :'' }}</span></p>
+        <p class = "new-price">New Price: <span>{{getDetails.price ? getDetails.price :'' }}</span></p>
       </div>
 
       <div class = "product-detail">
         <h2>about this item: </h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo eveniet veniam tempora fuga tenetur placeat sapiente architecto illum soluta consequuntur, aspernatur quidem at sequi ipsa!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, perferendis eius. Dignissimos, labore suscipit. Unde.</p>
+        <p>{{getDetails.description ? getDetails.description :'' }}</p>
+        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, perferendis eius. Dignissimos, labore suscipit. Unde.</p> -->
         <ul>
-          <li>Color: <span>Black</span></li>
+          <li>Color: <span>{{getDetails.color ? getDetails.color :'' }}</span></li>
           <li>Available: <span>in stock</span></li>
-          <li>Category: <span>Shoes</span></li>
+          <li>Category: <span>{{getDetails.category ? getDetails.category :'' }}</span></li>
           <li>Shipping Area: <span>All over the world</span></li>
           <li>Shipping Fee: <span>Free</span></li>
         </ul>
       </div>
 
       <div class = "purchase-info">
-        <input type = "number" min = "0" value = "1">
-        <button type = "button" class = "btn">
+        <form #getValue="ngForm" (ngSubmit)="getQuantity(getValue.value)">
+        <input  value = "1" type = "number"  min = "1" ngModel name="value">
+        <button type = "submit" class = "btn mt-2" (click)="addToCart()">
           Add to Cart <i class = "fas fa-shopping-cart"></i>
         </button>
-        <button type = "button" class = "btn">Compare</button>
+        <!-- <button *ngIf="removeCart" type = "submit" class = "btn mt-2" (click)="removeToCart(getDetails.id)">
+        Remove to Cart <i class = "fas fa-shopping-cart"></i>
+        </button> -->
+        <button type = "button" class = "btn mt-2">Compare</button>
+      </form>
       </div>
 
       <div class = "social-links">
@@ -253,6 +145,23 @@
           <i class = "fab fa-pinterest"></i>
         </a>
       </div>
+      <div class="row questions bg-light p-3 mt-3 w-100" >
+        <div class="col-md-1 icon mt-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chat-left-dots-fill" viewBox="0 0 16 16">
+            <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm5 4a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+          </svg>
+        </div>
+        <div class="col-md-11 text">
+            Have a question about our products at E-Store? Feel free to contact our representatives via live chat or email.
+        </div>
+    </div>
+
+    <div class="delivery my-4">
+        <p class="font-weight-bold mb-0"><span><svg style="color: black;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
+          <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+        </svg>&nbsp;</span> <b>Delivery done in 3 days from date of purchase</b> </p>
+        <p class="text-secondary">Order now to get this product delivery</p>
+    </div>
     </div>
   </div>
 </div>
