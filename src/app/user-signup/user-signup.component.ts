@@ -18,6 +18,7 @@ export class UserSignupComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.user.userReload()
   }
 
   SignupForm(data:signUp){

@@ -30,4 +30,33 @@ export class UsersService {
     })
 
   }
+
+  userReload() {
+    if(localStorage.getItem('user')){
+      this.router.navigate(['./'])
+    }
+  }
+
+  userLogin(user:login){
+    console.log(user);
+    this.http.get(`http://localhost:3000/users?email=${user.email}&password=${user.password}`,{observe : 'response'})
+    .subscribe((response:any)=>{
+      console.log(response);
+      if(response && response.body && response.body.length){
+        this.toastr.success('Login Succesfully')
+        console.log('user login');
+        localStorage.setItem('user',JSON.stringify(response.body))
+        this.router.navigate(['']);
+      }
+      else{
+        this.toastr.error('Email or Password is invalid')
+      }
+    })
+  }
+
+  userReloadLogin() {
+    if(localStorage.getItem('user')){
+      this.router.navigate(['./'])
+    }
+  }
 }

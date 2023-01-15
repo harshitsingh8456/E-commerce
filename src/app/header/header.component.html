@@ -45,7 +45,7 @@
               </ul><!-- /.flat-unstyled -->
               <ul class="flat-unstyled" *ngSwitchCase=" 'user' ">
                 <li class="account">
-                  <a  title="" >Logout</a>
+                  <a  style="cursor: pointer;" (click)="logout()">Logout</a>
                 </li>
                 <li>
                   <a  title="">English<i class="fa fa-angle-down" aria-hidden="true"></i></a>
@@ -197,7 +197,7 @@
                 </div><!-- /.mainnav -->
               </div><!-- /.nav-wrap -->
               <div class="today-deal">
-                <a  title="">{{userName ? userName : 'Today Deals'}}</a>
+                <a  title="">{{userName | titlecase}}</a>
               </div><!-- /.today-deal -->
               <div class="btn-menu">
                 <span></span>

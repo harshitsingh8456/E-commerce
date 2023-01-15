@@ -18,9 +18,9 @@ export class HeaderComponent implements OnInit {
     private product: ProductService) { }
 
   ngOnInit(): void {
-    this.router.events.subscribe((val:any)=>{
-      if(val.url){
-        console.log(val.url);
+    // this.router.events.subscribe((val:any)=>{
+    //   if(val.url){
+    //     console.log(val.url);
          if(localStorage.getItem('user')){
           let userStore = localStorage.getItem('user');
           let userData = userStore && JSON.parse(userStore);
@@ -31,8 +31,8 @@ export class HeaderComponent implements OnInit {
           console.log('Outsite Seller Area')
           this.menuType = 'deafult'
         }
-      }
-    })
+      // }
+    // })
   }
 
   searchProduct(query:KeyboardEvent){
@@ -56,6 +56,10 @@ export class HeaderComponent implements OnInit {
   }
   redirectToDetails(id:number){
     this.router.navigate(['/view/products/'+id])
+  }
+  logout() {
+    localStorage.removeItem('user');
+    this.router.navigate(['user/login'])
   }
 
 }

@@ -56,7 +56,7 @@ const routes: Routes = [
   },
   {
     path:'user/login',
-    component:UserLoginComponent
+    component:UserLoginComponent,
   },
   {
     path:'user/sign-up',
