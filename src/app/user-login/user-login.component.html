@@ -51,7 +51,8 @@
               <form id="stripe-login" #userLogin="ngForm" (ngSubmit)="loginForm(userLogin.value)">
                 <div class="field padding-bottom--24">
                   <label for="email">Email</label>
-                  <input ngModel type="email" name="email" placeholder="Enter Email" #email="ngModel">
+                  <input ngModel type="email" name="email" placeholder="Enter Email" #email="ngModel" email required>
+                  <span class="Invalid_input" *ngIf="email.invalid && email.touched">Please Enter Correct Email Id</span>
                 </div>
 
                 <div class="field padding-bottom--24">
@@ -61,15 +62,17 @@
                       <a href="#">Forgot your password?</a>
                     </div>
                   </div>
-                  <input type="password" ngModel name="password" placeholder="Enter your password" #password="ngModel">
+                  <input type="password" ngModel name="password" placeholder="Enter your password" #password="ngModel" minlength="6" required>
+                  <span class="Invalid_input" *ngIf="password.invalid && password.touched">Please Enter Correct password</span>
+
                 </div>
                 <div class="field field-checkbox padding-bottom--24 flex-flex align-center">
                   <label for="checkbox">
                     <input type="checkbox" name="checkbox"> Stay signed in for a week
                   </label>
                 </div>
-                <div class="field padding-bottom--24">
-                  <input style="background: blue;" href="#" type="submit" value="Login">
+                <div class="field padding-bottom--24 button_disbled" >
+                  <input  [disabled]="userLogin.invalid" style="background: blue;" href="#" type="submit" value="Login">
                 </div>
                 <div class="field">
                   <a class="ssolink" href="#">Use single sign-on (Google) instead</a>

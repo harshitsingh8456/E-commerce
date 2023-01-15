@@ -48,12 +48,15 @@
               <form id="stripe-login" #userSignup="ngForm" (ngSubmit)="SignupForm(userSignup.value)">
                 <div class="field padding-bottom--24">
                   <label for="email">Full Name</label>
-                  <input ngModel type="name" name="name" placeholder="Enter Your Full Name">
+                  <input ngModel type="name" name="name" placeholder="Enter Your Full Name" #name="ngModel" required>
+                  <span class="Invalid_input" *ngIf="name.invalid && name.touched">Please Enter Correct Name</span>
                 </div>
 
                 <div class="field padding-bottom--24">
                   <label for="email">Email</label>
-                  <input ngModel type="email" name="email" placeholder="Enter Email">
+                  <input ngModel type="email" name="email" placeholder="Enter Email" email #email="ngModel" required>
+                  <span class="Invalid_input" *ngIf="email.invalid && email.touched">Please Enter Correct Email Id</span>
+
                 </div>
 
                 <div class="field padding-bottom--24">
@@ -63,7 +66,8 @@
                       <a href="#">Forgot your password?</a>
                     </div>
                   </div>
-                  <input type="password" ngModel name="password" placeholder="Enter your password">
+                  <input type="password" ngModel name="password" placeholder="Enter your password" minlength="6" #password="ngModel" required>
+                  <span class="Invalid_input" *ngIf="password.invalid && password.touched">Please Enter Correct password</span>
                 </div>
                 <div class="field field-checkbox padding-bottom--24 flex-flex align-center">
                   <label for="checkbox">
@@ -71,7 +75,7 @@
                   </label>
                 </div>
                 <div class="field padding-bottom--24">
-                  <input style="background: blue;" href="#" type="submit" value="Register">
+                  <input [disabled]="userSignup.invalid" style="background: blue;" href="#" type="submit" value="Register">
                 </div>
                 <div class="field">
                   <a class="ssolink" href="#">Use single sign-on (Google) instead</a>
