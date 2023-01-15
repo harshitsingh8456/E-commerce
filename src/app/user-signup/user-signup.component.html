@@ -37,22 +37,26 @@
       </div>
       <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
         <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
-          <h1><a>Seller Login</a></h1>
-        </div>
-        <div class="box-root flex-flex flex-justifyContent--center error">
-          <p class="error">{{authError}}</p>
+          <h1><a>User Sign Up</a></h1>
         </div>
         <div class="formbg-outer">
           <div class="formbg">
             <div class="formbg-inner padding-horizontal--48">
-              <span class="padding-bottom--15">Login to your account</span>
+              <span class="padding-bottom--15">Sign in to your account</span>
 
 
-              <form id="stripe-login" #sellerLogin="ngForm" (ngSubmit)="loginForm(sellerLogin.value)">
+              <form id="stripe-login" #userSignup="ngForm" (ngSubmit)="SignupForm(userSignup.value)">
+                <div class="field padding-bottom--24">
+                  <label for="email">Full Name</label>
+                  <input ngModel type="name" name="name" placeholder="Enter Your Full Name" #name="ngModel" required>
+                  <span class="Invalid_input" *ngIf="name.invalid && name.touched">Please Enter Correct Name</span>
+                </div>
+
                 <div class="field padding-bottom--24">
                   <label for="email">Email</label>
-                  <input ngModel type="email" name="email" placeholder="Enter Email" #email="ngModel" email required>
+                  <input ngModel type="email" name="email" placeholder="Enter Email" email #email="ngModel" required>
                   <span class="Invalid_input" *ngIf="email.invalid && email.touched">Please Enter Correct Email Id</span>
+
                 </div>
 
                 <div class="field padding-bottom--24">
@@ -62,7 +66,7 @@
                       <a href="#">Forgot your password?</a>
                     </div>
                   </div>
-                  <input type="password" ngModel name="password" placeholder="Enter your password" #password="ngModel" minlength="6" required>
+                  <input type="password" ngModel name="password" placeholder="Enter your password" minlength="6" #password="ngModel" required>
                   <span class="Invalid_input" *ngIf="password.invalid && password.touched">Please Enter Correct password</span>
                 </div>
                 <div class="field field-checkbox padding-bottom--24 flex-flex align-center">
@@ -71,7 +75,7 @@
                   </label>
                 </div>
                 <div class="field padding-bottom--24">
-                  <input [disabled]="sellerLogin.invalid" style="background: blue;" href="#" type="submit" value="Login">
+                  <input [disabled]="userSignup.invalid" style="background: blue;" href="#" type="submit" value="Register">
                 </div>
                 <div class="field">
                   <a class="ssolink" href="#">Use single sign-on (Google) instead</a>
@@ -80,7 +84,7 @@
             </div>
           </div>
           <div class="footer-link padding-top--24">
-            <span>Don't Have an account? <a style="color: blue; cursor: pointer;" (click)="openSignup()"> Create an Account</a></span>
+            <span>Have an account? <a style="color: blue; cursor: pointer;" (click)="openLogin()"> Log In</a></span>
             <div class="listing padding-top--24 padding-bottom--24 flex-flex center-center">
               <span><a href="#">Contact</a></span>
               <span><a href="#">Privacy & terms</a></span>

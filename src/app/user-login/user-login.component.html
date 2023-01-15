@@ -37,10 +37,10 @@
       </div>
       <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
         <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
-          <h1><a>Seller Login</a></h1>
+          <h1><a>User Login</a></h1>
         </div>
         <div class="box-root flex-flex flex-justifyContent--center error">
-          <p class="error">{{authError}}</p>
+          <!-- <p class="error">{{authError}}</p> -->
         </div>
         <div class="formbg-outer">
           <div class="formbg">
@@ -48,7 +48,7 @@
               <span class="padding-bottom--15">Login to your account</span>
 
 
-              <form id="stripe-login" #sellerLogin="ngForm" (ngSubmit)="loginForm(sellerLogin.value)">
+              <form id="stripe-login" #userLogin="ngForm" (ngSubmit)="loginForm(userLogin.value)">
                 <div class="field padding-bottom--24">
                   <label for="email">Email</label>
                   <input ngModel type="email" name="email" placeholder="Enter Email" #email="ngModel" email required>
@@ -64,14 +64,15 @@
                   </div>
                   <input type="password" ngModel name="password" placeholder="Enter your password" #password="ngModel" minlength="6" required>
                   <span class="Invalid_input" *ngIf="password.invalid && password.touched">Please Enter Correct password</span>
+
                 </div>
                 <div class="field field-checkbox padding-bottom--24 flex-flex align-center">
                   <label for="checkbox">
                     <input type="checkbox" name="checkbox"> Stay signed in for a week
                   </label>
                 </div>
-                <div class="field padding-bottom--24">
-                  <input [disabled]="sellerLogin.invalid" style="background: blue;" href="#" type="submit" value="Login">
+                <div class="field padding-bottom--24 button_disbled" >
+                  <input  [disabled]="userLogin.invalid" style="background: blue;" href="#" type="submit" value="Login">
                 </div>
                 <div class="field">
                   <a class="ssolink" href="#">Use single sign-on (Google) instead</a>

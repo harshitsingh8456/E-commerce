@@ -416,3 +416,10 @@ a.ssolink {
 .error{
   color: red;
 }
+.Invalid_input{
+  color: red;
+  font-size: 15px;
+}
+input:disabled{
+  cursor: not-allowed;
+}

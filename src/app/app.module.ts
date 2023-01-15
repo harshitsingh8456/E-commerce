@@ -19,6 +19,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FooterComponent } from './footer/footer.component';
 import { SearchResultComponent } from './search-result/search-result.component';
 import { ViewProductComponent } from './view-product/view-product.component';
+import { ContactPageComponent } from './contact-page/contact-page.component';
+import { UserLoginComponent } from './user-login/user-login.component';
+import { UserSignupComponent } from './user-signup/user-signup.component';
 
 
 
@@ -35,7 +38,10 @@ import { ViewProductComponent } from './view-product/view-product.component';
     SellerUpdateProductComponent,
     FooterComponent,
     SearchResultComponent,
-    ViewProductComponent
+    ViewProductComponent,
+    ContactPageComponent,
+    UserLoginComponent,
+    UserSignupComponent
   ],
   imports: [
     BrowserModule,
