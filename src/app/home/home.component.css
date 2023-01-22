@@ -123,7 +123,7 @@ section#shiping {
 
 .box-title {
   display: inline-grid;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 .box-title h3 {
@@ -139,4 +139,7 @@ section#shiping {
   padding: 10px;
   border-radius: 5px;
   margin-bottom: 5px;
+}
+.carousel-inner {
+  margin-top: 15rem !important;
 }

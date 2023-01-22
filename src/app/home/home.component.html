@@ -1,12 +1,13 @@
-<app-header></app-header>
+<app-header class="fixed-top"></app-header>
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 
 <!-- carousel srction -->
 <span *ngIf="popularProductsShop">
-<ngb-carousel style="background-color: black;" *ngIf="popularProducts">
+<ngb-carousel style="background-color: black; margin-top: 11.5rem;" *ngIf="popularProducts">
     <ng-template *ngFor="let product of popularProducts" ngbSlide>
         <div class="picsum-img-wrapper">
           <a routerLink="/view/products/{{product.id}}">
@@ -28,40 +29,79 @@
       <div class="row">
           <div class="col-md-3">
               <div class="shipping-box">
-                  <div class="box-icon"><i class="fas fa-truck"></i></div>
-                  <div class="box-title">
-                      <h3>Free Shipping</h3>
-                      <p>above <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-currency-rupee" viewBox="0 0 16 16">
-                        <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z"/>
-                      </svg></span>500 only</p>
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-2">
+                      <div class="box-icon"><i class="fas fa-truck mt-4"></i></div>
+                    </div>
+                    <div class="col-10">
+                      <div class="box-title mt-2">
+                          <h3>Free Shipping</h3>
+                          <p>above <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-currency-rupee" viewBox="0 0 16 16">
+                            <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z"/>
+                          </svg></span>500 only</p>
+                      </div>
+                    </div>
                   </div>
+                </div>
               </div>
           </div>
           <div class="col-md-3">
               <div class="shipping-box">
-                  <div class="box-icon"><i class="far fa-address-book"></i></div>
-                  <div class="box-title">
-                      <h3>Certified Organic</h3>
-                      <p>100% guarantee</p>
+                <div class="container-fluid p-1">
+                  <div class="row">
+                    <div class="col-2">
+                      <div class="box-icon"><i class="far fa-address-book mt-3 ml-1"></i></div>
+
+                    </div>
+                    <div class="col-10">
+                      <div class="box-title">
+                          <h4>Certified Site</h4>
+                          <p>100% guarantee</p>
+                      </div>
+
+                    </div>
                   </div>
-              </div>
-          </div>
-          <div class="col-md-3">
-              <div class="shipping-box" style="    padding-top: 21px; ">
-                  <div class="box-icon"><i class="far fa-money-bill-alt"></i></div>
-                  <div class="box-title">
-                      <h3>Huge Savings</h3>
-                      <p>at lowest price</p>
-                  </div>
+                </div>
               </div>
           </div>
           <div class="col-md-3">
               <div class="shipping-box">
-                  <div class="box-icon"><i class="fas fa-recycle"></i></div>
+                <div class="container-fluid">
+                  <div class="row" style="padding: 2.8px;">
+                    <div class="col-2">
+                      <div class="box-icon"><i class="far fa-money-bill-alt mt-3"></i></div>
+                    </div>
+                    <div class="col-10">
+                      <div class="box-title mt-1">
+                        <h3>Huge Savings</h3>
+                        <p>at lowest price</p>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="col-md-3">
+              <div class="shipping-box">
+                  <div class="container-fluid">
+                    <div class="row" style="padding: 2.8px;">
+                      <div class="col-2">
+                         <div class="box-icon"><i class="fas fa-recycle mt-3"></i></div>
+                      </div>
+                      <div class="col-10">
+                        <div class="box-title mt-1">
+                          <h3>Easy Returns</h3>
+                          <p>no questions asked</p>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- <div class="box-icon"><i class="fas fa-recycle"></i></div>
                   <div class="box-title">
                       <h3>Easy Returns</h3>
                       <p>no questions asked</p>
-                  </div>
+                  </div> -->
               </div>
           </div>
       </div>
@@ -76,12 +116,12 @@
   <div class="product-card zoom" *ngFor="let item of trendyProducts">
     <img style="height: 15rem; width: 17rem;" src="{{item.image}}">
     <h3 class="product-name">{{item.product}}</h3>
-    <p class="product-description p-3">{{item.description.length>100 ? item.description.slice(0,100)+"..." : item.description }}</p>
+    <p class="product-description p-3">{{item.description.length>60 ? item.description.slice(0,60)+"..." : item.description }}</p>
     <div class="product-price-name">Price:<span class="product-prices">{{item.price}}</span></div>
     <div>
       <button class="view-button" routerLink="/view/products/{{item.id}}">View More</button>
       &nbsp;
-      <button class="add-to-cart-button" (click)="addToCart()">Add to Cart</button>
+      <button class="add-to-cart-button">Add to Cart</button>
     </div>
   </div>
   </div>
