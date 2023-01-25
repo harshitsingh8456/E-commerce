@@ -452,7 +452,7 @@ th {
   text-align: left;
   padding: 5px;
   color: #ffffff;
-  background: #ff523b;
+  background: darkcyan;
   font-weight: normal;
 }
 td {
@@ -471,9 +471,10 @@ td a {
 }
 
 td img {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 120px;
   margin-right: 10px;
+  border-radius: 0.5rem;
 }
 
 .total-price {
@@ -600,4 +601,7 @@ form a {
   .cart-info p {
     display: none;
   }
+}
+.cart-page{
+  margin: 50px auto !important;
 }

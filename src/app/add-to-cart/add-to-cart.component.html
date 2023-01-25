@@ -1,6 +1,8 @@
 <app-header></app-header>
 <!-- cart items details -->
 
+<h2 style="text-align: center;" class="mt-3">Cart Page</h2>
+
 <div class="small-container cart-page">
   <table>
     <tr>
@@ -9,114 +11,49 @@
       <th>Subtotal</th>
     </tr>
 
-    <tr>
+    <tr style="border-bottom: 1px solid black;"  *ngFor="let item of cartData">
       <td>
         <div class="cart-info">
-          <img src="https://i.ibb.co/B3vYjvw/buy-1.jpg" alt="" />
+          <img src="{{item.image}}" alt="" />
           <div>
-            <p>Red Printed T-Shirt</p>
-            <small>Price ₹500.00</small>
+            <p>{{item.product}}</p>
+            <small>Price ₹ {{item.price}}</small>
             <br />
             <a href="#">Remove</a>
           </div>
         </div>
       </td>
-      <td><input type="number" value="1" /></td>
-      <td>₹500.00</td>
-    </tr>
-    <tr>
-      <td>
-        <div class="cart-info">
-          <img src="https://i.ibb.co/qmSHWx7/buy-2.jpg" alt="" />
-          <div>
-            <p>HRX Shoes</p>
-            <small>Price ₹1500.00</small>
-            <br />
-            <a href="#">Remove</a>
-          </div>
-        </div>
-      </td>
-      <td><input type="number" value="1" /></td>
-      <td>₹1500.00</td>
-    </tr>
-    <tr>
-      <td>
-        <div class="cart-info">
-          <img src="https://i.ibb.co/NyYtY31/buy-3.jpg" alt="" />
-          <div>
-            <p>Reebok Tracksuit</p>
-            <small>Price ₹1500.00</small>
-            <br />
-            <a href="#">Remove</a>
-          </div>
-        </div>
-      </td>
-      <td><input type="number" value="1" /></td>
-      <td>₹1500.00</td>
+      <td><input type="number" value="{{item.value}}" /></td>
+      <td>₹ {{item.price}}</td>
     </tr>
   </table>
 
-  <div class="total-price">
+  <div class="total-price mt-3">
     <table>
       <tr>
         <td>Subtotal</td>
-        <td>₹3500.00</td>
+        <td>₹ {{priceSummary.price}}</td>
+      </tr>
+      <tr>
+        <td>Discount</td>
+        <td>₹ {{priceSummary.discount}}</td>
+      </tr>
+      <tr>
+      <tr>
+        <td>Delivery</td>
+        <td>₹ {{priceSummary.delivery}}</td>
       </tr>
       <tr>
         <td>Tax</td>
-        <td>₹15.00</td>
+        <td>₹ {{priceSummary.tax}}</td>
       </tr>
       <tr>
         <td>Total</td>
-        <td>₹3515.00</td>
+        <td>₹ {{priceSummary.total}}</td>
       </tr>
     </table>
   </div>
 </div>
 
-<!-- Footer -->
-<div class="footer">
-  <div class="container">
-    <div class="row">
-      <div class="footer-col-1">
-        <h3>Download Our App</h3>
-        <p>Download App for Android and iso mobile phone.</p>
-        <div class="app-logo">
-          <img src="https://i.ibb.co/KbPTYYQ/play-store.png" alt="" />
-          <img src="https://i.ibb.co/hVM4X2p/app-store.png" alt="" />
-        </div>
-      </div>
-
-      <div class="footer-col-2">
-        <img src="../../assets/Images/logp.png" alt="" />
-        <p>
-          Our Purpose Is To Sustainably Make the Pleasure and Benefits of
-          Sports Accessible to the Many.
-        </p>
-      </div>
-
-      <div class="footer-col-3">
-        <h3>Useful Links</h3>
-        <ul>
-          <li>Coupons</li>
-          <li>Blog Post</li>
-          <li>Return Policy</li>
-          <li>Join Affiliate</li>
-        </ul>
-      </div>
-
-      <div class="footer-col-4">
-        <h3>Follow us</h3>
-        <ul>
-          <li>Facebook</li>
-          <li>Twitter</li>
-          <li>Instagram</li>
-          <li>YouTube</li>
-        </ul>
-      </div>
-    </div>
-    <hr />
-    <p class="copyright">Copyright &copy; 2021 - Sell Cart Pvt Ltd</p>
-  </div>
-</div>
+<app-footer></app-footer>
 
