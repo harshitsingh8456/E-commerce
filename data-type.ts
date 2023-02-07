@@ -47,3 +47,22 @@ export interface priceSummary {
   tax:number,
   total:number
 }
+
+export interface orderSummary {
+name:string,
+email:string,
+number:number,
+address:string,
+address1:string,
+country:boolean
+state:boolean,
+zip:number,
+same_address:boolean,
+save_info:boolean,
+paymentMethod:boolean,
+totalPrice:number,
+userId:number,
+image : string,
+product: string,
+price: number
+}
