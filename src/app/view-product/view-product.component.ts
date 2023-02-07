@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../services/product.service';
-import { product } from 'data-type';
+import { cart, product } from 'data-type';
 import { ActivatedRoute } from '@angular/router';
 import { filter,map } from 'rxjs/operators';
 import { Router } from '@angular/router';
@@ -48,6 +48,17 @@ export class ViewProductComponent implements OnInit {
       //     }
       //     else this.removeCart = false
       // }
+      let user = localStorage.getItem('user');
+      if(user){
+        let userId = user && JSON.parse(user)[0].id;
+        this.product.getCartList(userId);
+        this.product.cartData.subscribe((result)=>{
+          let items = result.filter((item:product)=>{
+            this.getId.toString() === item.product_id?.toString()
+          })
+        })
+
+      }
     })
     // for(let data of this.getDetails){
     //   console.log(data);
@@ -57,23 +68,40 @@ export class ViewProductComponent implements OnInit {
   getQuantity(data:any){
     this.value = data
     this.getProductValue = data.value
+    this.addToCart();
     console.log(this.getProductValue);
   }
 
 
-  addToCart(){
-    // this.getQuantity(event)
+  async addToCart(){
     if(this.getDetails){
       this.getDetails.value = this.getProductValue
       if(!localStorage.getItem('user')){
+        await this.product.localAddToCart(this.getDetails)
         console.log(this.getDetails);
-        this.product.localAddToCart(this.getDetails)
         // this.removeCart = true
         this.toastr.success('Product Added to Cart')
 
       }
       else{
         console.log('else');
+        let user = localStorage.getItem('user');
+        let userId = user && JSON.parse(user)[0].id;
+        console.log(userId);
+        let cartData:cart = {
+          ...this.getDetails,
+          userId,
+          product_id:this.getDetails.id
+        }
+        delete cartData.id
+        console.log(cartData);
+        this.product.addToCart(cartData).subscribe((result)=>{
+          if(result){
+            this.product.getCartList(userId)
+            this.toastr.success('Product Added to cart Succesfully')
+          }
+        })
+
       }
 
     }

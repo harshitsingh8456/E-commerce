@@ -27,6 +27,7 @@ export class HeaderComponent implements OnInit {
           let userData = userStore && JSON.parse(userStore);
           this.userName = userData.name
           this.menuType = 'user';
+          this.product.getCartList(userData.id)
         }
         else {
           console.log('Outsite Seller Area')
@@ -68,9 +69,10 @@ export class HeaderComponent implements OnInit {
   redirectToDetails(id:number){
     this.router.navigate(['/view/products/'+id])
   }
-  logout() {
+  logOut() {
     localStorage.removeItem('user');
     this.router.navigate(['user/login'])
+    this.product.cartData.emit([])
   }
 
 }

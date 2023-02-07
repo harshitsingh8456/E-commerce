@@ -13,6 +13,8 @@ import { ContactPageComponent } from './contact-page/contact-page.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { UserSignupComponent } from './user-signup/user-signup.component';
 import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
+import { CheckoutPageComponent } from './checkout-page/checkout-page.component';
+import { MyodersPageComponent } from './myoders-page/myoders-page.component';
 
 const routes: Routes = [
   {
@@ -45,6 +47,16 @@ const routes: Routes = [
   {
     path:'seller/products/update/:id',
     component:SellerUpdateProductComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path:'user/checkout',
+    component:CheckoutPageComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path:'user/orders',
+    component:MyodersPageComponent,
     canActivate: [AuthGuard]
   },
   {

@@ -11,6 +11,8 @@ import { login, signUp } from 'data-type';
 })
 export class UsersService {
 
+  invalidUser:any;
+
   constructor(
     private http: HttpClient,
     private router: Router,
@@ -49,6 +51,7 @@ export class UsersService {
         this.router.navigate(['']);
       }
       else{
+        this.invalidUser = response
         this.toastr.error('Email or Password is invalid')
       }
     })

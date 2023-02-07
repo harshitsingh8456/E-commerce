@@ -1,0 +1,46 @@
+<app-header></app-header>
+<div class="container mt-4">
+  <h1 style="color: black;">My Orders</h1>
+    <table class="rwd-table mt-3">
+      <tbody>
+        <tr>
+          <th>Sr No</th>
+          <th>Order</th>
+          <th>Name</th>
+          <th>Order Id</th>
+          <th>Price</th>
+          <th>Location</th>
+          <th>Payment Method</th>
+          <th>Status</th>
+        </tr>
+        <tr *ngFor="let item of Data">
+          <td data-th="Sr No">
+            1
+          </td>
+          <td data-th="Order">
+            <img src="{{item.image}}" alt="">
+          </td>
+          <td data-th="Name">
+            {{item.product}}
+          </td>
+          <td data-th="Order Id">
+            {{item.id}}
+          </td>
+          <td data-th="Price">
+            {{item.price}}
+          </td>
+          <td data-th="Location">
+            {{item.state}}
+          </td>
+          <td data-th="Payment Method">
+            Cash on Delivery
+          </td>
+          <td data-th="Status" style="color: green;">
+            In Process
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br><br>
+  </div>
+<app-footer></app-footer>
