@@ -22,6 +22,17 @@ export class AddToCartComponent implements OnInit {
   constructor(private product : ProductService) { }
 
   ngOnInit(): void {
+    this.loadDetails()
+  }
+
+  removeToCart (cartId: number | undefined) {
+    cartId && this.product.removeToCart(cartId)
+    .subscribe((result)=>{
+      this.loadDetails()
+    })
+  }
+
+  loadDetails(){
     this.product.getProductCart().subscribe((response)=>{
       console.log(response);
       this.cartData = response
@@ -41,5 +52,6 @@ export class AddToCartComponent implements OnInit {
       console.log(this.priceSummary);
 
     })
+
   }
 }

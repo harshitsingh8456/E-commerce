@@ -40,9 +40,9 @@
             <div class="col-md-3">
               <div class="box-cart">
                 <div class="inner-box">
-                  <ul class="menu-compare-wishlist">
-                    <li class="wishlist">
-                      <a   routerLink="user/login">
+                  <ul class="menu-compare-wishlist"  routerLink="user/login"  style="cursor: pointer;">
+                    <li class="wishlist" >
+                      <a>
                         <i  class="fa fa-user" aria-hidden="true"></i>
                       </a>
                     </li>
@@ -51,7 +51,7 @@
                 <div class="inner-box">
                   <a  title="" >
                     <div class="icon-cart">
-                      <i routerLink="user/add-to-cart" class="fa fa-shopping-cart" aria-hidden="true"></i>
+                      <i routerLink="user/add-to-cart" style="cursor: pointer;" class="fa fa-shopping-cart" aria-hidden="true"></i>
                       <span>{{cartNumber}}</span>
                     </div>
                     <div class="price">
@@ -92,6 +92,9 @@
                     </li><!-- /.has-mega-menu -->
                     <li class="column-1">
                       <a  title="" routerLink="contact">Contact</a>
+                    </li><!-- /.column-1 -->
+                    <li class="column-1">
+                      <a  title="" routerLink="/user/orders">My Orders</a>
                     </li><!-- /.column-1 -->
                   </ul><!-- /.menu -->
                 </div><!-- /.mainnav -->
