@@ -51,7 +51,7 @@
                 <div class="inner-box">
                   <a  title="" >
                     <div class="icon-cart">
-                      <i routerLink="user/add-to-cart" style="cursor: pointer;" class="fa fa-shopping-cart" aria-hidden="true"></i>
+                      <i (click)="addToCart()" style="cursor: pointer;" class="fa fa-shopping-cart" aria-hidden="true"></i>
                       <span>{{cartNumber}}</span>
                     </div>
                     <div class="price">
@@ -79,8 +79,25 @@
             </div><!-- /.col-md-3 col-2 -->
             <div class="col-md-9 col-10">
               <div class="nav-wrap">
-                <div id="mainnav" class="mainnav">
-                  <ul class="menu">
+                <div id="mainnav" class="mainnav" [ngSwitch]="menuType">
+                  <ul class="menu" *ngSwitchCase="'default'">
+                    <li class="column-1">
+                      <a routerLink="/" title="">Home</a>
+                    </li><!-- /.column-1 -->
+                    <li class="column-1">
+                      <a  routerLink="seller/login" title="">Seller</a>
+                    </li><!-- /.column-1 -->
+                    <li class="has-mega-menu">
+                      <a  title="">product</a>
+                    </li><!-- /.has-mega-menu -->
+                    <li class="column-1">
+                      <a  title="" routerLink="contact">Contact</a>
+                    </li><!-- /.column-1 -->
+                    <!-- <li class="column-1">
+                      <a  title="" routerLink="/user/orders">My Orders</a>
+                    </li> -->
+                  </ul>
+                  <ul class="menu" *ngSwitchCase="'user'">
                     <li class="column-1">
                       <a routerLink="/" title="">Home</a>
                     </li><!-- /.column-1 -->
@@ -96,15 +113,32 @@
                     <li class="column-1">
                       <a  title="" routerLink="/user/orders">My Orders</a>
                     </li><!-- /.column-1 -->
-                  </ul><!-- /.menu -->
+                  </ul>
+                  <ul class="menu" *ngSwitchCase="'seller'">
+                    <li class="column-1">
+                      <a routerLink="" title="">Home</a>
+                    </li><!-- /.column-1 -->
+                    <li class="column-1">
+                      <a routerLink="/seller/products" title="">Add-Product </a>
+                    </li><!-- /.column-1 -->
+                    <li class="column-1" style="cursor: pointer;">
+                      <a  routerLink="/seller/home">Product-List</a>
+                    </li><!-- /.column-1 -->
+                    <li class="column-1">
+                      <a  title="" style="cursor: pointer;">Blog</a>
+                    </li><!-- /.column-1 -->
+                    <li class="column-1">
+                      <a  title="" routerLink="contact" >Contact</a>
+                    </li><!-- /.column-1 -->
+                  </ul>
                 </div><!-- /.mainnav -->
               </div><!-- /.nav-wrap -->
-              <div class="today-deal">
+              <!-- <div class="today-deal">
                 <a  title="">{{userName | titlecase}}</a>
-              </div><!-- /.today-deal -->
+              </div> -->
               <div class="btn-menu">
                 <span></span>
-              </div><!-- //mobile menu button -->
+              </div>
             </div><!-- /.col-md-9 -->
           </div><!-- /.row -->
         </div><!-- /.container -->
